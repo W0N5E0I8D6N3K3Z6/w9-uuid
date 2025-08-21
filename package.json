@@ -28,7 +28,7 @@
         "typescript": "^5.9.2"
     },
     "dependencies": {
-        "w9-default-proxy-handler": "^0.0.3",
+        "w9-default-proxy-handler": "^0.0.4",
         "xe-utils": "^3.7.8"
     }
 }
