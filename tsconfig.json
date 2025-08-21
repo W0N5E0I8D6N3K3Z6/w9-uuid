@@ -4,7 +4,7 @@
 		"outDir": "lib",
 		"target": "esnext",
 		"declaration": false,
-		"esModuleInterop": true
+		"moduleResolution": "node",
 	},
 	"include": [
 		"src/main.ts",
