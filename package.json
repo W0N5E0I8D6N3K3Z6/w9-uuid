@@ -1,8 +1,14 @@
 {
     "name": "w9-uuid",
-    "private": true,
     "version": "0.0.0",
-    "main": "lib/index.js",
+    "author": "W0N5E0I8D6N3K3Z6",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/W0N5E0I8D6N3K3Z6/w9-uuid"
+    },
+    "license": "",
+    "private": true,
+    "main": "lib/main.js",
     "types": "lib/index.d.ts",
     "type": "module",
     "scripts": {
