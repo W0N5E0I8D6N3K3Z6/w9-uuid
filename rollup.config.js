@@ -10,28 +10,23 @@ import dts from "rollup-plugin-dts";
 // 配置
 export default [
     {
-        input: "src/main.ts",
         output: [
             {
-                file: "lib/main.d.ts",
+                file: resolve("lib", "main.d.ts"),
                 format: "es",
             },
         ],
         plugins: [dts()],
     },
     {
-        input: "src/main.ts",
-        output: [
-            {
-                file: `lib/main.js`, // 文件名
-                format: "es",
-            },
-            {
-                file: `lib/main.umd.js`, // 文件名
-                format: "umd",
-                name: "uuid",
-            },
-        ],
+        output: ["es", "umd"].map((format) => ({
+            file: resolve("lib", `main.${format}.js`),
+            name: "uuid",
+            format,
+        })),
         plugins: [commonjs(), terser(), typescript()],
     },
-];
+].map((config) => {
+    config.input = resolve("src", "main.ts");
+    return config;
+});

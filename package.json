@@ -1,14 +1,17 @@
 {
     "name": "w9-uuid",
     "version": "0.0.0",
-    "author": "W0N5E0I8D6N3K3Z6",
     "repository": {
         "type": "git",
         "url": "https://github.com/W0N5E0I8D6N3K3Z6/w9-uuid"
     },
-    "license": "",
-    "private": true,
-    "main": "lib/main.js",
+    "license": "WTFPL",
+    "files": [
+        "LICENSE",
+        "lib/"
+    ],
+    "main": "lib/main.umd.js",
+    "module": "lib/main.js",
     "types": "lib/index.d.ts",
     "type": "module",
     "scripts": {
