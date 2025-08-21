@@ -1,5 +1,5 @@
 /* ---------- 内部依赖 ---------- */
-import defaultProxyHandler from "./component/defaultProxyHandler";
+import handler from "w9-default-proxy-handler";
 import v4 from "./component/v4";
 import v7 from "./component/v7";
 
@@ -14,7 +14,7 @@ const main = () => {
     // 输出代理
     return new Proxy(
         mainMap.get("new"),
-        defaultProxyHandler(mainMap, {
+        handler(mainMap, {
             // 函数调用
             apply: () => mainMap.get("v7")(),
 

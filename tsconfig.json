@@ -4,6 +4,7 @@
 		"outDir": "lib",
 		"target": "esnext",
 		"declaration": false,
+		"esModuleInterop": true
 	},
 	"include": [
 		"src/main.ts",

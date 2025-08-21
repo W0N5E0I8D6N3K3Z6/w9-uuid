@@ -26,5 +26,9 @@
         "rollup-plugin-dts": "^6.2.3",
         "tslib": "^2.8.1",
         "typescript": "^5.9.2"
+    },
+    "dependencies": {
+        "w9-default-proxy-handler": "^0.0.3",
+        "xe-utils": "^3.7.8"
     }
 }
