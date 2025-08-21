@@ -4,8 +4,6 @@
 		"outDir": "lib",
 		"target": "esnext",
 		"declaration": false,
-		"paths": {},
-		"allowSyntheticDefaultImports": true
 	},
 	"include": [
 		"src/main.ts",
