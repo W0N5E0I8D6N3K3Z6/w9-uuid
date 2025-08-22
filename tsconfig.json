@@ -1,10 +1,10 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"outDir": "lib",
-		"target": "esnext",
-		"declaration": false,
+		"declaration": true,
 		"moduleResolution": "node",
+		"outDir": "dist",
+		"target": "esnext",
 	},
 	"include": [
 		"src/main.ts",
