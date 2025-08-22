@@ -26,6 +26,7 @@
         "typescript": "^5.9.2"
     },
     "dependencies": {
-        "w9-default-proxy-handler": "github:W0N5E0I8D6N3K3Z6/w9-default-proxy-handler"
+        "w9-default-proxy-handler": "github:W0N5E0I8D6N3K3Z6/w9-default-proxy-handler",
+        "xe-utils": "^3.7.8"
     }
 }
