@@ -13,5 +13,5 @@ const uuidv7 = uuid.v7
 ```
 
 ```JavaScript
-const uuidv7= uuid()
+const uuidv7 = uuid()
 ```
