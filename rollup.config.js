@@ -2,6 +2,7 @@
 import { resolve } from "path";
 
 /* ---------- 第三方依赖 ---------- */
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
@@ -14,5 +15,5 @@ export default {
         name: "default-proxy-handler",
         format,
     })),
-    plugins: [commonjs(), terser(), typescript()],
+    plugins: [nodeResolve(), commonjs(), terser(), typescript()],
 };
