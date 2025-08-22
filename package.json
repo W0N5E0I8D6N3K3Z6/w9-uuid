@@ -9,11 +9,11 @@
     "files": [
         "README.md",
         "LICENSE",
-        "dist/"
+        "lib/"
     ],
-    "main": "dist/main.umd.js",
-    "module": "dist/main.es.js",
-    "types": "dist/index.d.ts",
+    "main": "lib/main.umd.js",
+    "module": "lib/main.es.js",
+    "types": "lib/main.d.ts",
     "type": "module",
     "scripts": {
         "build": "rollup --config"
@@ -26,7 +26,6 @@
         "typescript": "^5.9.2"
     },
     "dependencies": {
-        "w9-default-proxy-handler": "github:W0N5E0I8D6N3K3Z6/w9-default-proxy-handler",
-        "xe-utils": "^3.7.8"
+        "w9-default-proxy-handler": "^0.0.6"
     }
 }

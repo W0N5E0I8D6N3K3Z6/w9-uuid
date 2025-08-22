@@ -10,7 +10,7 @@ import typescript from "@rollup/plugin-typescript";
 export default {
     input: resolve("src", "main.ts"),
     output: ["es", "umd"].map((format) => ({
-        file: resolve("dist", `main.${format}.js`),
+        file: resolve("lib", `main.${format}.js`),
         name: "default-proxy-handler",
         format,
     })),

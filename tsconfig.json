@@ -3,7 +3,7 @@
 		"allowJs": true,
 		"declaration": true,
 		"moduleResolution": "node",
-		"outDir": "dist",
+		"outDir": "lib",
 		"target": "esnext",
 	},
 	"include": [
