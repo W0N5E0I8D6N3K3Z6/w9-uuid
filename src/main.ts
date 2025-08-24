@@ -17,7 +17,7 @@ const v4 = () => {
  * @returns 输出UUID
  */
 const v7 = () => {
-    const t: string = Date.now().toString(16).padStart(12, "0"); // 获取 Unix 时间戳并在开头补 0 到 12 位
+    const t = Date.now().toString(16).padStart(12, "0"); // 获取 Unix 时间戳并在开头补 0 到 12 位
     return [
         t.slice(0, 8), // 提取开头的 8 位
         t.slice(8), // 提取结尾的 8 位
@@ -28,14 +28,16 @@ const v7 = () => {
 // 闭包生成
 const main = () => {
     // 映射表
-    const mainMap: any = new Map();
-    mainMap.set("new", () => main());
-    mainMap.set("v4", v4);
-    mainMap.set("v7", v7);
+    const mainMap = new Map(
+        Object.entries({
+            v4,
+            v7,
+        }),
+    );
 
     // 输出代理
     return new Proxy(
-        mainMap.get("new"),
+        () => main(),
         handler(mainMap, {
             // 函数调用
             apply: () => mainMap.get("v7")(),
@@ -47,4 +49,5 @@ const main = () => {
 };
 
 // 默认导出
-export default main();
+const use = main();
+export default use;
