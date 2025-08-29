@@ -1,5 +1,5 @@
 /* ---------- 第三方依赖 ---------- */
-import handler from "w9-default-proxy-handler/lib/main.es.js";
+import handler from "w9-default-proxy-handler";
 
 /**
  * UUID（v4）生成器
