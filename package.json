@@ -1,6 +1,6 @@
 {
     "name": "w9-uuid",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/W0N5E0I8D6N3K3Z6/w9-uuid"
@@ -27,6 +27,6 @@
         "typescript": "^5.9.2"
     },
     "dependencies": {
-        "w9-default-proxy-handler": "^0.0.7"
+        "w9-default-proxy-handler": "^0.0.8"
     }
 }
