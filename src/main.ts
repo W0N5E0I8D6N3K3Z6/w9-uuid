@@ -28,12 +28,9 @@ const v7 = () => {
 // 闭包生成
 const main = () => {
     // 映射表
-    const mainMap = new Map(
-        Object.entries({
-            v4,
-            v7,
-        }),
-    );
+    const mainMap = new Map();
+    mainMap.set("v4", v4);
+    mainMap.set("v7", v7);
 
     // 输出代理
     return new Proxy(
