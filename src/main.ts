@@ -34,7 +34,9 @@ const main = () => {
 
     // 输出代理
     return new Proxy(
-        () => main(),
+        function () {
+            return main();
+        },
         handler(mainMap, {
             // 函数调用
             apply: () => mainMap.get("v7")(),
