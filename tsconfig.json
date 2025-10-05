@@ -8,5 +8,9 @@
 	},
 	"include": [
 		"src/main.ts",
+		"types/vite-define.d.ts"
+	],
+	"exclude": [
+		"node_modules"
 	]
 }
