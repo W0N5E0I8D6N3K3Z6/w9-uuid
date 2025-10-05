@@ -1,16 +1,16 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"declaration": true,
-		"moduleResolution": "node",
-		"outDir": "lib",
-		"target": "esnext",
-	},
-	"include": [
-		"src/main.ts",
-		"types/vite-define.d.ts"
-	],
-	"exclude": [
-		"node_modules"
-	]
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": true,
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "target": "esnext"
+    },
+    "include": [
+        "src/main.ts",
+        "types/vite-define.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }

@@ -7,13 +7,13 @@
     },
     "license": "WTFPL",
     "files": [
-        "README.md",
+        "dist/",
         "LICENSE",
-        "lib/"
+        "README.md"
     ],
-    "main": "lib/main.umd.js",
-    "module": "lib/main.es.js",
-    "types": "lib/main.d.ts",
+    "main": "dist/main.umd.js",
+    "module": "dist/main.es.js",
+    "types": "dist/main.d.ts",
     "scripts": {
         "build": "vite build"
     },

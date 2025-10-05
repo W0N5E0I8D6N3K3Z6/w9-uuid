@@ -9,13 +9,21 @@ import dts from "vite-plugin-dts";
 import xe from "xe-utils";
 
 /* ---------- 配置文件 ---------- */
+import tcg from "./tsconfig.json";
 import pkg from "./package.json";
 
+const outDir = "dist"; // 输出路径
 const date = new Date(); // 编译时间
 const year = date.getFullYear() - 2025; // 生成大版本号
 
+tcg.compilerOptions.outDir = outDir; // 修改 TS 配置
 pkg.version = (year > 0 ? year : `0${year}`) + xe.toDateString(new Date(), ".MM.dd"); // 替换版本号
+pkg.files = [`${outDir}/`, "LICENSE", "README.md"]; // 上传文件
+pkg.main = `${outDir}/main.umd.js`;
+pkg.module = `${outDir}/main.es.js`;
+pkg.types = `${outDir}/main.d.ts`;
 
+fs.writeFileSync(ph.resolve("tsconfig.json"), JSON.stringify(tcg, null, 4)); // 刷新配置文件
 fs.writeFileSync(ph.resolve("package.json"), JSON.stringify(pkg, null, 4)); // 刷新配置文件
 fs.writeFileSync(ph.resolve("types", "vite-define.d.ts"), ""); // 清空声明文件
 
@@ -30,7 +38,7 @@ export default defineConfig({
          * 输出路径
          * https://cn.vitejs.dev/config/build-options.html#build-outdir
          */
-        outDir: "lib",
+        outDir,
 
         /**
          * 库模式
