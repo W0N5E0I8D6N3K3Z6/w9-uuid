@@ -10,9 +10,12 @@ import xe from "xe-utils";
 
 /* ---------- 配置文件 ---------- */
 import pkg from "./package.json";
+
 const date = new Date(); // 编译时间
 const year = date.getFullYear() - 2025; // 生成大版本号
+
 pkg.version = (year > 0 ? year : `0${year}`) + xe.toDateString(new Date(), ".MM.dd"); // 替换版本号
+
 fs.writeFileSync(ph.resolve("package.json"), JSON.stringify(pkg, null, 4)); // 刷新配置文件
 fs.writeFileSync(ph.resolve("types", "vite-define.d.ts"), ""); // 清空声明文件
 
@@ -23,7 +26,12 @@ export default defineConfig({
      * https://vitejs.cn/vite5-cn/config/build-options.html
      */
     build: {
+        /**
+         * 输出路径
+         * https://cn.vitejs.dev/config/build-options.html#build-outdir
+         */
         outDir: "lib",
+
         /**
          * 库模式
          * https://vitejs.cn/vite5-cn/guide/build.html#library-mode
@@ -56,5 +64,5 @@ export default defineConfig({
      * 插件
      * https://vitejs.cn/vite5-cn/config/shared-options.html#plugins
      */
-    plugins: [dts()],
+    plugins: [dts({ rollupTypes: true })],
 });
