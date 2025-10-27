@@ -25,7 +25,7 @@ pkg.types = `${outDir}/main.d.ts`;
 
 fs.writeFileSync(ph.resolve("tsconfig.json"), JSON.stringify(tcg, null, 4)); // 刷新配置文件
 fs.writeFileSync(ph.resolve("package.json"), JSON.stringify(pkg, null, 4)); // 刷新配置文件
-fs.writeFileSync(ph.resolve("types", "vite-define.d.ts"), ""); // 清空声明文件
+fs.writeFileSync(ph.resolve("types", "vite-define.d.ts"), "// 这是自动生成的常量声明文件\n"); // 清空声明文件
 
 /* ---------- 导出配置 ---------- */
 export default defineConfig({
