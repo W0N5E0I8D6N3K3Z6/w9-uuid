@@ -6,8 +6,9 @@ import handler from "w9-default-proxy-handler";
  * @returns 输出UUID
  */
 function v4() {
+    let r: number = 0; // 创建变量
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, ($) => {
-        const r: number = Math.trunc(Math.random() * 16);
+        r = Math.trunc(Math.random() * 16); // 生成随机数
         return ($ === "x" ? r : (r & 0x3) | 0x8).toString(16);
     });
 }
@@ -17,7 +18,7 @@ function v4() {
  * @returns 输出UUID
  */
 function v7() {
-    const t = Date.now().toString(16).padStart(12, "0"); // 获取 Unix 时间戳并在开头补 0 到 12 位
+    let t = Date.now().toString(16).padStart(12, "0"); // 获取 Unix 时间戳并在开头补 0 到 12 位
     return [
         t.slice(0, 8), // 提取开头的 8 位
         t.slice(8), // 提取结尾的 8 位
@@ -28,7 +29,7 @@ function v7() {
 // 闭包生成
 function main() {
     // 映射表
-    const mainMap = new Map();
+    let mainMap = new Map();
     mainMap.set("v4", v4);
     mainMap.set("v7", v7);
 
@@ -49,5 +50,5 @@ function main() {
 main.version = VITE_LIB_VERSION;
 
 // 默认导出
-const use = main();
+let use = main();
 export default use;
